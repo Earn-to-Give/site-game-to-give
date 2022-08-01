@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game to Give™</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.productwar.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '7']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+  </head>
+  <body class="index is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h3 id="logo">
+          <a href="index.html"><strong>Game</strong> <span>to Give™</span></a>
+        </h3>
+        <nav id="nav">
+          <ul>
+            <li class="current" style="color: black"><a href="index.html">Sign In</a></li>
+            <li><a href="#" class="button primary">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <article id="main">
+
+        <!-- Three -->
+        <section class="wrapper style3 container special">
+
+          <header class="special container">
+    
+            <!-- Form -->
+        <form name='contact'>
+            <h2>Contact Us</h2>
+            <br />
+            <p class="paragraph-center">
+                Fill out the form below, and we'll respond as soon as we're able.</p>
+
+            <form name="join-a-stoa">
+
+              <h3>Your Name</h3>
+                <input type="text" name="name" required>
+              <br / class="rwd-break">
+
+              <h3>Email Address</h3>
+                <input type="email" name="email" placeholder="me@email.com" required>
+              <br / class="rwd-break">
+
+              <h3>Message</h3>
+                 <textarea name="message" type="text" cols="40" rows="5" required></textarea>
+                
+                    <br / class="rwd-break">
+               
+
+              <input type="submit" value="Send Message" onClick="submitForm()">
+
+                        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+                        <script>
+                            function submitForm() {
+                                const scriptURL = '#'
+                                const form = document.forms['contact']
+                                form.addEventListener('submit', e => {
+                                    e.preventDefault()
+                                        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                                        .then(document.forms['contact'].reset())
+                            })
+                            form.addEventListener('submit', onSubmit)
+                            function onSubmit() {
+                                    swal("Thanks!", "We'll be in touch soon.", "success");
+                                }
+                            }
+                        </script>
+
+          </form>
+
+        </header>
+ 
+        </section>
+
+          <!-- CTA -->
+          <section id="cta">
+            <header>
+              <h2>Ready to <strong>find a game</strong>?</h2>
+            </header>
+            <footer>
+              <ul class="buttons">
+                <li><a href="#" class="button">Sign In</a></li>
+                <li><a href="#" class="button primary">Sign Up</a></li>
+              </ul>
+            </footer>
+          </section>
+
+          <!-- Footer -->
+          <footer id="footer">
+            <ul class="copyright">
+              <li>
+                &copy;
+                <script type="text/javascript">
+                  document.write(new Date().getFullYear());
+                </script>
+                <strong>Earn to Give™</strong>
+              </li>
+            </ul>
+          </footer>
+          <!-- </div> -->
+
+          <!-- Scripts -->
+          <script src="assets/js/jquery.min.js"></script>
+          <script src="assets/js/jquery.dropotron.min.js"></script>
+          <script src="assets/js/jquery.scrolly.min.js"></script>
+          <script src="assets/js/jquery.scrollex.min.js"></script>
+          <script src="assets/js/browser.min.js"></script>
+          <script src="assets/js/breakpoints.min.js"></script>
+          <script src="assets/js/util.js"></script>
+          <script src="assets/js/main.js"></script>
+  </body>
+</html>
